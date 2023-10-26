@@ -8,6 +8,7 @@ Meals is a simple Flutter application that helps you discover tasty meal recepie
 - Click on a meal and see ingredients and steps to prepare it.
 - Favorite meals and view them in a separate screen.
 - Filter meals based on your preferences.
+- Search for meals by title.
 
 ## Screenshots
 
@@ -64,6 +65,13 @@ The Meals app follows a clean Flutter architecture, separating UI, data, and bus
     - Specifications:
         - The user can filter meals based on gluten-free, lactose-free, vegan, and vegetarian preferences.
 
+- **User Story 3: Search for meals**
+- As a user, I want to search for meals.
+    - Specifications:
+        - The user can search for all meals by title.
+        - The user can click on a search result to view details about the meal.
+        - The user can favorite a meal and view it in a separate screen.
+
 ## File and Folder Structure
 
 - **lib/**
@@ -81,6 +89,7 @@ The Meals app follows a clean Flutter architecture, separating UI, data, and bus
     - **meal_details.dart**: Displays details about a meal.
     - **meals.dart**: Displays a list of meals in a category.
     - **tabs.dart**: Displays tabs for navigating between the categories and favorites screens.
+    - **search.dart**: Displays a search page for searching all meals.
   - **widgets/** 
     - **category_grid_item.dart**: Displays a meal category.
     - **main_drawer.dart**: Displays a drawer for navigating between the categories and favorites screens.
