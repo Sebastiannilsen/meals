@@ -51,7 +51,7 @@ The Meals app follows a clean Flutter architecture, separating UI, data, and bus
 
 ## User Stories and Specifications
 
-- **User Story 1: Find a good meal
+- **User Story 1: Find a good meal**
   - As a user, I want to find a good meal to cook.
     - Specifications:
         - The user can browse through a list of meal categories.
@@ -59,7 +59,7 @@ The Meals app follows a clean Flutter architecture, separating UI, data, and bus
         - The user can view details about a meal, including ingredients and steps to prepare it.
         - The user can favorite a meal and view it in a separate screen.
 
-- **User Story 2: Filter meals
+- **User Story 2: Filter meals**
 - As a user, I want to filter meals based on my preferences.
     - Specifications:
         - The user can filter meals based on gluten-free, lactose-free, vegan, and vegetarian preferences.
