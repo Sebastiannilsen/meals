@@ -4,6 +4,7 @@ import 'package:transparent_image/transparent_image.dart';
 import 'package:meals/widgets/meal_item_trait.dart';
 import 'package:meals/models/meal.dart';
 
+// A widget that represents a meal item displayed in a card.
 class MealItem extends StatelessWidget {
   const MealItem({
     super.key,
@@ -14,11 +15,13 @@ class MealItem extends StatelessWidget {
   final Meal meal;
   final void Function(Meal meal) onSelectMeal;
 
+  // Get the text representation of meal complexity (capitalized first letter).
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
         meal.complexity.name.substring(1);
   }
 
+  // Get the text representation of meal affordability (capitalized first letter).
   String get affordabilityText {
     return meal.affordability.name[0].toUpperCase() +
         meal.affordability.name.substring(1);
@@ -64,7 +67,8 @@ class MealItem extends StatelessWidget {
                       maxLines: 2,
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      overflow: TextOverflow.ellipsis, // Very long text ...
+                      overflow: TextOverflow
+                          .ellipsis, // Handle long text with ellipsis.
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

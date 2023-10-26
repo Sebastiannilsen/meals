@@ -15,6 +15,7 @@ const kInitialFilters = {
   Filter.vegan: false
 };
 
+// A widget representing the main app screen with tabs for categories and favorites.
 class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
 
@@ -27,12 +28,14 @@ class TabsScreen extends ConsumerStatefulWidget {
 class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
 
+  // Function to select the active page when a tab is tapped.
   void _selectPage(int index) {
     setState(() {
       _selectedPageIndex = index;
     });
   }
 
+  // Function to set the screen (drawer item) and navigate to the Filters Screen.
   void _setScreen(String identifier) async {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
@@ -53,6 +56,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     );
     var activePageTitle = 'Categories';
 
+    // Determine the active page and its title based on the selected tab.
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
       activePage = MealsScreen(

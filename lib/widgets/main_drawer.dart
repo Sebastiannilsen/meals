@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+// A widget that represents the main navigation drawer in the app.
 class MainDrawer extends StatelessWidget {
-  const MainDrawer({super.key, required this.onSelectScreen});
+  const MainDrawer({
+    super.key,
+    required this.onSelectScreen,
+  });
 
   final void Function(String identifier) onSelectScreen;
 
@@ -56,7 +60,7 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
-              onSelectScreen('meals');
+              onSelectScreen('meals'); // Trigger the 'meals' screen.
             },
           ),
           ListTile(
@@ -73,7 +77,7 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
-              onSelectScreen('filters');
+              onSelectScreen('filters'); // Trigger the 'filters' screen.
             },
           ),
         ],

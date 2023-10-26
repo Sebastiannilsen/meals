@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:meals/data/dummy_data.dart';
 import 'package:meals/models/meal.dart';
 import 'package:meals/widgets/category_grid_item.dart';
@@ -8,7 +7,7 @@ import 'package:meals/models/category.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({
-    super.key,
+    super.key, // Key is added for widget identification.
     required this.availableMeals,
   });
 
@@ -54,7 +53,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
           meals: filteredMeals,
         ),
       ),
-    ); // Navigator.push(context, route)
+    ); // Navigate to the MealsScreen with selected category's meals.
   }
 
   @override
@@ -70,7 +69,6 @@ class _CategoriesScreenState extends State<CategoriesScreen>
           mainAxisSpacing: 20,
         ),
         children: [
-          // availableCategories.map((category) => CategoryGridItem(category: category)).toList()
           for (final category in availableCategories)
             CategoryGridItem(
               category: category,
