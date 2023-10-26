@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
+import 'package:meals/screens/search.dart';
 import 'package:meals/widgets/main_drawer.dart';
 import 'package:meals/providers/favorites_provider.dart';
 import 'package:meals/providers/filters_provider.dart';
@@ -63,6 +64,11 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
         meals: favoriteMeals,
       );
       activePageTitle = 'Your Favorites';
+    } else if (_selectedPageIndex == 2) {
+      activePage = SearchScreen(
+        allMeals: availableMeals,
+      );
+      activePageTitle = 'Search';
     }
 
     return Scaffold(
@@ -84,6 +90,10 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
             label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
           ),
         ],
       ),
